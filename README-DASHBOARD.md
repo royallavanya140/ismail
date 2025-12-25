@@ -22,9 +22,14 @@ Vercel KV provides persistent storage for your submissions.
 
 ### 2. Link KV to Your Project
 
-1. In your Vercel project, go to **Settings** → **Environment Variables**
-2. The KV connection string should be automatically available
-3. Make sure `KV_REST_API_URL` and `KV_REST_API_TOKEN` are set (Vercel does this automatically)
+**Important:** After creating the KV database, you need to link it to your project:
+
+1. In your Vercel project dashboard, go to the **Storage** tab
+2. Find your KV database in the list
+3. Click on it, then click **"..."** (three dots) → **"Link to Project"**
+4. Select your project and click **Link**
+5. Vercel will automatically add `KV_REST_API_URL` and `KV_REST_API_TOKEN` environment variables
+6. These variables will be available in your serverless functions automatically
 
 ### 3. Set Dashboard Password
 

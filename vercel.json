@@ -11,9 +11,6 @@
       "src": "/api/(.*)",
       "dest": "/api/$1"
     }
-  ],
-  "env": {
-    "DASHBOARD_PASSWORD": "@dashboard_password"
-  }
+  ]
 }
 

@@ -57,7 +57,8 @@ export default async function handler(req, res) {
       // If Vercel KV is not set up, log the submission
       // In production, you should set up Vercel KV
       console.error('Vercel KV not available, submission logged:', submission);
-      console.warn('Please set up Vercel KV for persistent storage');
+      console.error('KV Error details:', kvError.message);
+      console.warn('Please link your KV database to this project in Vercel dashboard');
     }
 
     // Return success response

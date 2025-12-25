@@ -42,11 +42,12 @@ export default async function handler(req, res) {
     } catch (kvError) {
       // If Vercel KV is not set up, return empty array
       console.error('Vercel KV not available:', kvError);
+      console.error('KV Error details:', kvError.message);
       return res.status(200).json({
         success: true,
         count: 0,
         submissions: [],
-        message: 'Vercel KV not configured. Please set up Vercel KV for persistent storage.'
+        message: 'Vercel KV not configured. Please link your KV database to this project in Vercel dashboard.'
       });
     }
 
